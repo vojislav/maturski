@@ -1,13 +1,28 @@
-\documentclass[11pt,oneside,a4paper]{article}
-\begin{document}
+\documentclass[12pt,oneside,a4paper]{article}
+\usepackage{graphicx}
+\graphicspath{ {../img/} }
+\usepackage[left=2cm, right=2cm, top=2.5cm, bottom=3cm]{geometry}
 \title{Operativni sistem Linux}
 \author{Vojislav Lazić}
 \date{February 2019}
-\maketitle
+\begin{document}
+\noindent\hspace{0in}Šesta beogradska gimanazija\par
+\noindent\hspace{0in}Milana Rakića 33\par
+\noindent\hspace{0in}Beograd\par
+\begin{center}
+Maturski rad iz informatike\\
+Operativni sistem Linux
+\end{center}
+\thispagestyle{empty}
+
+
 \newpage
 \tableofcontents
 \newpage
 \section{Istorija Linuxa}
 \input{istorija}
 
+\bibliographystyle{unsrt}
+\addcontentsline{toc}{section}{Literatura}
+\bibliography{bib}
 \end{document}
