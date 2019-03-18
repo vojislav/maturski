@@ -1,4 +1,4 @@
-\documentclass[12pt,oneside,a4paper]{article}
+\documentclass[12pt,twoside,a4paper]{article}
 \usepackage{graphicx}
 \graphicspath{ {../img/} }
 \usepackage[left=2cm, right=2cm, top=2.5cm, bottom=3cm]{geometry}
@@ -6,13 +6,28 @@
 \author{Vojislav Lazić}
 \date{February 2019}
 \begin{document}
-\noindent\hspace{0in}Šesta beogradska gimanazija\par
-\noindent\hspace{0in}Milana Rakića 33\par
-\noindent\hspace{0in}Beograd\par
-\begin{center}
-Maturski rad iz informatike\\
-Operativni sistem Linux
-\end{center}
+    \thispagestyle{empty}
+    \noindent
+    Šesta beogradska gimanzija\\
+    Milana Rakića 33\\
+    Beograd
+    \vfill
+    \begin{center}
+        \begin{Large}
+        Maturski rad iz informatike\\
+        \medskip 
+        \end{Large}
+        {\Huge
+        Operativni sistem Linux}
+    \end{center}
+    \vfill
+    \noindent Mentor: \hfill Učenik:\\
+    Olivera Mihailović \hfill Vojislav Lazić IV$_{9}$\\
+    Profesor informatike
+    \vfill
+    \begin{center}
+        Beograd, jun 2019.
+    \end{center}
 \thispagestyle{empty}
 
 
@@ -22,6 +37,7 @@ Operativni sistem Linux
 \section{Istorija Linuxa}
 \input{istorija}
 
+\renewcommand\refname{Literatura}
 \bibliographystyle{unsrt}
 \addcontentsline{toc}{section}{Literatura}
 \bibliography{bib}
