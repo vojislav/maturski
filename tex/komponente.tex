@@ -25,7 +25,11 @@ Eksperimentiše se sa exokernel-ima. Glavna razlika izmedju njih i ostalih vrsta
 \cite{kernel}
 
 \subsection{Daemoni}
+Daemon je program na Linux sistemima koji radi u pozadini, bez direktne kontrole korisnika. Oni obično služe da odgovaraju na zahteve drugih kompjutera na mreži, ali takodje, da reaguju na softverske i hardverske promene na samom kompjuteru. Na primer, na daemon-e mogu da utiču odredjeno vreme ili datum, stvaranje fajla u specifičnom folderu, zahtev napravljen preko interneta, itd.
+Daemon-i se vode u sistemu kao potprocesi "init" procesa, što je prvi proces koji se pokreče sa kompjuterom. Na većini novih Linux sistema, daemon-i se pale samo po potrebi i na zahtev jednog glavnog daemon-a - "xinetd". \cite{daemon}
+
 \subsection{Shell}
+Shell služi da obezbedi isključivo tekstualni "interfejs" za korisnika. Njegova primarna svrha je čita komande iz konzole i da ih pokrene. "Shell" ili "ljuska" se odnosi na to da je to spoljašnji sloj opertivnog sistema tj. shell je posrednik izmedju korisnika i unutrašnjih delova sistema. Osim za sa samo pokretanje programa, shell-ovi imaju sposobnost da usmeravaju output? jedne komande da bude korišćen kao input? druge komande - "piping" (prvo uvedeno još u UNIX-u) i takodje da služe kao programski jezik - sintaksa komandi može da se koristi za pisanje "shell skripti". Postoje razni shell-ovi, od kojih je najpopularniji "bash"(Bourne-again shell),  koji je nadogradnja na "sh"(Bourne shell) - originalni UNIX shell.
 \subsection{X window sistem}
 \subsection{Window menadzer}
 \subsection{Desktop okruzenje}
