@@ -6,6 +6,10 @@
 \title{Operativni sistem Linux}
 \author{Vojislav Lazić}
 \date{February 2019}
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 	\begin{document}
     \thispagestyle{empty}
     \noindent
@@ -30,18 +34,20 @@
         Beograd, jun 2019.
     \end{center}
 \thispagestyle{empty}
-
-
 \newpage
+\renewcommand{\contentsname}{Sadržaj}
 \tableofcontents
 \newpage
 \section{Istorija Linuxa}
 \input{istorija}
 \section{Komponente Linux sistema}
 \input{komponente}
-
+\section{Osnovne komande u Linux-u}
+\input{komande}
+\nocite{linfo}
 \renewcommand\refname{Literatura}
 \bibliographystyle{unsrt}
 \addcontentsline{toc}{section}{Literatura}
+
 \bibliography{bib}
 \end{document}

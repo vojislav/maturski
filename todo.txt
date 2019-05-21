@@ -1,0 +1,7 @@
+-- osnovne komande u linux-u
+-- folder struktura u(usr, bin, dev...)
+mozda:
+-- redirekcija
+-- pipes
+-- environment vairbles
+-- file permissions?

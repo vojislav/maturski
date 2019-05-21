@@ -1,10 +1,13 @@
+Linux se instalira putem neke od mnogobrojnih "Linux distribucija" što su potpuni opertivni sistemi sa već instaliranim aplikacijama i  drajverima da zadovolje razne potrebe. Postoje distribucije namenjene da prosečnom korisniku za svakodnevne poslove(Ubuntu, Debian, Linux Mint), distribucije orijentisane ka bezbednosti (Kali Linux), naučnom istraživanju (CAELinux), edukaciji (Edubuntu), itd.\\
+Jedino što sve distribucije imaju zajedničko je Linux kernel, dok većina rasprostranjenijih distribucija ima i iste osnovne komponente.
+
+
 \subsection{Bootloader}
 Boot loader je program koji se pokreće pre bilo kog operativnog sistema. Njegov posao je da nadje operativni sistem (ili više njih) i da ga pokrene. Na Linuxu postoji nekoliko bootloader-a:\begin{itemize}
 \item GRUB (\textbf{GR}and \textbf{U}nified \textbf{B}ootloader) - najpopularniji, deo GNU programa napravljenih za GNU Hurd kernel.
 \item LILO (\textbf{Li}nux \textbf{Lo}ader) - razvoj je prekinut jer nije podržavao sisteme sa više od jednog operativnog sistema.
 \item SYSLINUX - skup neintenzivnih bootloader-a, najčešće se koriste za podizanje sistema sa drajvova malih kapaciteta, kao fleš drajv, DVD...
 \end{itemize}
-
 
 \subsection{Kernel}
 Kernel je najvažniji i najosnovniji deo svakog operativnog sistema. Kernel je zadužen da pokrene svaku komponentu potrebu za korišćenje sistema, da služi kao posrednik u komunikaciji izmedju softvera i hardvera, i delova softvera medjusobno. Kernel je potreban tokom celog korišćenja računara, pa je stoga neophodno da on bude što manji i što efikasniji.\\
@@ -22,14 +25,15 @@ Postji 4 glavne kategorije kernel-a:
 \item hibridni - kompromis izmedju monolitskih i mikrokernel-a. Osimišljeni se pre nego što je otkriveno da su mikrokernel-i daleko efikasniji od hibridnih.
 Eksperimentiše se sa exokernel-ima. Glavna razlika izmedju njih i ostalih vrsta kernel-a je što se jedino bave zaštitom harvera umesto menadžmentom hardvera. Ovim pristupom exokernel-i omogućuje programerima da bolje odrede kako najefikasnije da koriste raspoloživ hardver.
 \end{itemize}
-\cite{kernel}
 
 \subsection{Daemoni}
 Daemon je program na Linux sistemima koji radi u pozadini, bez direktne kontrole korisnika. Oni obično služe da odgovaraju na zahteve drugih kompjutera na mreži, ali takodje, da reaguju na softverske i hardverske promene na samom kompjuteru. Na primer, na daemon-e mogu da utiču odredjeno vreme ili datum, stvaranje fajla u specifičnom folderu, zahtev napravljen preko interneta, itd.
-Daemon-i se vode u sistemu kao potprocesi "init" procesa, što je prvi proces koji se pokreče sa kompjuterom. Na većini novih Linux sistema, daemon-i se pale samo po potrebi i na zahtev jednog glavnog daemon-a - "xinetd". \cite{daemon}
+Daemon-i se vode u sistemu kao potprocesi "init" procesa, što je prvi proces koji se pokreče sa kompjuterom. Na većini novih Linux sistema, daemon-i se pale samo po potrebi i na zahtev jednog glavnog daemon-a - "xinetd".
 
 \subsection{Shell}
 Shell služi da obezbedi isključivo tekstualni "interfejs" za korisnika. Njegova primarna svrha je čita komande iz konzole i da ih pokrene. "Shell" ili "ljuska" se odnosi na to da je to spoljašnji sloj opertivnog sistema tj. shell je posrednik izmedju korisnika i unutrašnjih delova sistema. Osim za sa samo pokretanje programa, shell-ovi imaju sposobnost da usmeravaju output? jedne komande da bude korišćen kao input? druge komande - "piping" (prvo uvedeno još u UNIX-u) i takodje da služe kao programski jezik - sintaksa komandi može da se koristi za pisanje "shell skripti". Postoje razni shell-ovi, od kojih je najpopularniji "bash"(Bourne-again shell),  koji je nadogradnja na "sh"(Bourne shell) - originalni UNIX shell.
 \subsection{X window sistem}
-\subsection{Window menadzer}
-\subsection{Desktop okruzenje}
+X window sistem ili samo "X" je sistem za menadžment grafičkih interfejsa (GUIs) na Linux-u. "Window sistem" je kolekcija softvera koja omogućava korisniku lakšu kontrolu nad stvaranjem prozora i drugih grafičkih elemenata na kompjuteru. Važna karakteristika X-a je što je odvojen od opertivnog sistema, za razliku kod Windows-a i starijih verzija Mac sistema gde je window sistem bio sastavni deo operativog sistema. Na Linux-u, i bez window sistema, sistem može da se kontroliše kroz komandni interfejs (CLI).\\
+Još jedna važna karakteristika X-a je što je on samo mehanizam za korisnički interfejs, bez da odredjuje kakav će on biti. Ovo daje korisniku slobodu da sam odredi kakav interfejs želi, za raliku od drugih opertivnih sistema gde je unapred odredjeno kako će interfejs izgledati. Korisnik nije u kontaktu sa X-om. Aplikacije su same zadužene za svoje ponašanje i izgled, X služi samo da ih prikaže. Ovo je dovelo do toga da svaki program izgleda drugačije, jer je svaki dolazio sa svojim sopstevnim podešavanjima. Ovaj problem je rešen sa desktop okruženjima.
+\subsection{Desktop okruženje}
+Desktop okruženje je skup softvera i drajvera koji rade na već postojećem sistemu sa gorenavedenim komponentama i služe da korisniku pruže što jednostavnije korišćenje sistema. Najpopularnija desktop okruženja su GNOME, KDE, Xfce, LXDE, itd.
