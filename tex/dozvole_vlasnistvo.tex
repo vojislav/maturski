@@ -1,0 +1,18 @@
+Važna odlike Linux i njemu sličnim sistemima je što svaki objekat(fajlovi, folderi, itd.) ima svoje dozvole za pristup. Ovaj sistem je veoma važan za održavanje visokog nivoa bezbednosti i stabilnosti Linux sistema.\\
+Svaki objekat ima tri tipa dozvola: za \texttt{čitanje}(read), \texttt{pisanje}(write) i \textit{pokretanje}(execute). Ova tri tipa se odnose na dozvole: \textit{vlasnika objekta}(korsnik koji ga je napravio), \textit{grupe}(skup korsnika sa istim pravima na pristup) i na sve ostale korisnike.\\
+Na svakom Linux sistemu postoji automatski napravljen administratorski korisnik ili \textit{root}, čija se prava razlikuju od ostalih korisnika, u tome što on ima puna prava na svaki objekat u sistemu. Samim tim, ima sposobnost da menja dozvole drugih kornika nad tim objektom.\\
+Dozvole nekog objekta mogu da se predstave na nekoliko načina, jedan od kojih je tekstualno, preko stringa od 10 karaktera. Prvi karakter predstavlja tip objekta(\texttt{-} za običan fajl, \texttt{d} za folder). Ostalih 9 predstavlja kakve dozvole imaju vlasnik, grupa i ostali korisnici nad tim objektom(3 tipa dozvole za 3 tipa korisnika).\\
+Na primer, komandom \texttt{ls -l} vidimo sve fajlove i foldere u trenutnom folderu, ali sa \texttt{-l} opcijom vidimo i karakteristike tog objekta, kao i ko ima kakve dozvole nad njim.\\
+Jedan tekstualni prikaz dozvola izgleda ovako: \textit{-rwxrw-r--}. Po prvom karakteru možemo da zaključimo da je objekat fajl. Od sledeća 3 karaktera vidimo dozvole vlasnika fajla tj. da ima čitanje(\textit{r}), pisanje(\textit{w}) i pokretanje(\textit{x}) prava. Od druga 3 vidimo prava grupe i od poslednja 3 prava ostalih korisnika.\\
+Vlasništvo takodje može da se prikaže brojčano tj. preko tri broja, od 0 do 8, gde svaki broj označava tip vlasništva svakog tipa korsnika. Brojevi imaju sledeća značenja:
+\begin{itemize}
+\item \textbf{0} - nikakva vrsta dozvola
+\item \textbf{1} - samo pravo na pokretanje
+\item \textbf{2} - samo pravo na pisanje
+\item \textbf{3} - pravo na pokretanje i pisanje
+\item \textbf{4} - samo pravo na čitanje
+\item \textbf{5} - pravo na čitanje i pokretanje
+\item \textbf{6} - pravo na čitanje i pisanje
+\item \textbf{7} - sva prava
+\end{itemize}
+Prava nekog objekta mogu da se menjaju sa \texttt{chmod} komandom koristeći brojčanu metodu(prava nekog objekta jedino mogu da menjaju vlasnik fajla i \textit{root} korisnik).
