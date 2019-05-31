@@ -16,7 +16,7 @@ Bootloader (ili boot loader) je program koji se pokreće pre bilo kog operativno
 
 \subsection{Kernel}
 Kernel je najvažniji i najosnovniji deo svakog operativnog sistema. Kernel je zadužen da pokrene svaku komponentu potrebnu za korišćenje sistema, da služi kao posrednik u komunikaciji izmedju softvera i hardvera, i delova softvera medjusobno. Kernel je potreban tokom celog korišćenja računara, pa je stoga neophodno da on bude što manji i što efikasniji.\\
-Osnovi delove kernel-a su obično:
+Osnovni delovi kernel-a su obično:
 \begin{itemize}
 \item rasporednik - odredjuje kako će razni procesi koristiti snagu procesora.
 \item supervizor - odobrava kontrolu kompjutera procesu koji je na redu.
@@ -25,9 +25,9 @@ Osnovi delove kernel-a su obično:
 \end{itemize}
 Postji 4 glavne kategorije kernel-a:
 \begin{itemize}
-\item monolitski - obično se nadju kod Unix-sličnih operativnih sistema, Linux i FreeBSD su primeri. Oni sadrže sve osnove funkcije OS-a i drajvere potrebne za korišćenje hardvera kao hard diskova, grafičkih kartica, printera, itd. Moderni monolitski kernel-i imaju opciju da odrede koji moduli kernel-a će se koristiti, time smanjujući količinu koda kernel-a.
+\item monolitski - obično se nadju kod Unix-sličnih operativnih sistema, Linux i FreeBSD su primeri. Oni sadrže sve osnovne funkcije OS-a i drajvere potrebne za korišćenje hardvera kao hard diskova, grafičkih kartica, printera, itd. Moderni monolitski kernel-i imaju opciju da odrede koji moduli kernel-a će se koristiti, time smanjujući količinu koda kernel-a.
 \item microkernel - imaju samo minimalan broj usluga kao menadžer memorije, sistem za komunikaciju izmedju procesa i menadžer procesa. Sve ostale funkcije su implementirane nezavisno od kernel-a. Primeri mikrokernel-a su GNU Herd, MINIX i Mac OS X.
-\item hibridni - kompromis izmedju monolitskih i mikrokernel-a. Osimišljeni se pre nego što je otkriveno da su mikrokernel-i daleko efikasniji od hibridnih.\\
+\item hibridni - kompromis izmedju monolitskih i mikrokernel-a. Osmišljeni su pre nego što je otkriveno da su mikrokernel-i daleko efikasniji od hibridnih.\\
 Eksperimentiše se sa exokernel-ima. Glavna razlika izmedju njih i ostalih vrsta kernel-a je što se jedino bave zaštitom harvera umesto menadžmentom hardvera. Ovim pristupom exokernel-i omogućuje programerima da bolje odrede kako najefikasnije da koriste raspoloživ hardver.
 \end{itemize}
 \newpage
@@ -38,8 +38,8 @@ Daemon-i se vode u sistemu kao potprocesi ``init'' procesa, što je prvi proces 
 Na većini novih Linux sistema, daemon-i se pale samo po potrebi i na zahtev jednog glavnog daemon-a - ``xinetd''.
 
 \subsection{Shell}
-Shell služi da obezbedi isključivo tekstualni ``interfejs'' za korisnika. Njegova primarna svrha je čita komande iz konzole i da ih pokrene.\\
-Naziv ``shell'' ili ``ljuska'' se odnosi na to da je to spoljašnji sloj opertivnog sistema tj. shell je posrednik izmedju korisnika i unutrašnjih delova sistema. Osim za sa samo pokretanje programa, shell-ovi imaju sposobnost da usmeravaju \textit{output} jedne komande da bude korišćen kao \textit{input} druge komande - ``piping'' (prvo uvedeno još u UNIX-u) i takodje da služe kao programski jezik - sintaksa komandi može da se koristi za pisanje ``shell skripti''.\\
+Shell služi da obezbedi isključivo tekstualni ``interfejs'' za korisnika. Njegova primarna svrha je da čita komande iz konzole i da ih pokrene.\\
+Naziv ``shell'' ili ``ljuska'' se odnosi na to da je to spoljašnji sloj opertivnog sistema tj. shell je posrednik izmedju korisnika i unutrašnjih delova sistema. Osim za samo pokretanje programa, shell-ovi imaju sposobnost da usmeravaju \textit{output} jedne komande da bude korišćen kao \textit{input} druge komande - ``piping'' (prvo uvedeno još u UNIX-u) i takodje da služe kao programski jezik - sintaksa komandi može da se koristi za pisanje ``shell skripti''.\\
 Postoje razni shell-ovi, od kojih je najpopularniji ``bash'' (Bourne-again shell),  koji je nadogradnja na ``sh'' (Bourne shell) - originalni UNIX shell.
 \subsection{X window sistem}
 X window sistem ili samo ``X'' je sistem za menadžment grafičkih interfejsa (GUIs) na Linux-u. \textit{Window sistem} je kolekcija softvera koja omogućava korisniku lakšu kontrolu nad stvaranjem prozora i drugih grafičkih elemenata na kompjuteru.\\
